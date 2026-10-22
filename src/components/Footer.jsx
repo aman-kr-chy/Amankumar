@@ -53,8 +53,8 @@ const Footer = () => {
         <div className="footer-grid">
           <div>
             <div className="footer-brand">
-              <img src="/logo.png" alt="Logo" className="footer-logo" onError={(e) => e.target.style.display = 'none'} />
-              {siteConfig.agencyBrand}<span>.</span>
+              <img src="/aw-logo.png" alt="AmanWebsiteBuilder Logo" className="footer-logo" onError={(e) => e.target.style.display = 'none'} />
+              <span className="footer-brand-name">AmanWebsiteBuilder</span><span className="footer-brand-dot">.</span>
             </div>
             <p className="footer-desc">
               We build high-performance, beautiful, and scalable web solutions that help businesses establish a powerful online presence.
@@ -105,7 +105,10 @@ const Footer = () => {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; {currentYear} {siteConfig.agencyName}. All rights reserved.</p>
+          <div className="footer-bottom-brand">
+            <img src="/aw-logo.png" alt="AmanWebsiteBuilder" className="footer-bottom-logo" onError={(e) => e.target.style.display = 'none'} />
+            <p>&copy; {currentYear} <span className="footer-brand-highlight">AmanWebsiteBuilder</span>. All rights reserved.</p>
+          </div>
         </div>
       </div>
 

@@ -25,7 +25,7 @@ const FooterSection = () => {
   };
 
   return (
-    <footer id="contact" className="footer-cta-wrapper">
+    <footer id="footer" className="footer-cta-wrapper">
       <div className="container">
         <div style={{ textAlign: 'center', maxWidth: '880px', margin: '0 auto' }}>
           <h2 className="footer-hero-headline">
@@ -60,8 +60,9 @@ const FooterSection = () => {
         </div>
 
         <div className="footer-bottom-bar">
-          <div>
-            <span>© {new Date().getFullYear()} {siteConfig.name}. Designed & Engineered with precision.</span>
+          <div className="footer-brand-inline">
+            <img src="/aw-logo.png" alt="AmanWebsiteBuilder" className="footer-inline-logo" />
+            <span>© {new Date().getFullYear()} <strong style={{ background: 'linear-gradient(110deg,#0066ff,#00d4ff)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>AmanWebsiteBuilder</strong>. Designed &amp; Engineered with precision.</span>
           </div>
 
           <div className="footer-social-links">

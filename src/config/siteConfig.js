@@ -1,5 +1,7 @@
 export const siteConfig = {
   name: "Aman Kumar",
+  agencyBrand: "AmanWebsiteBuilder",
+  agencyName: "AmanWebsiteBuilder",
   handle: "@amankumar",
   role: "AI & Full-Stack Developer",
   status: "Available for projects",

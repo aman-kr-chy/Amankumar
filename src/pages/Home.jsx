@@ -3,11 +3,13 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import SkillsMarquee from '../components/SkillsMarquee';
 import WhatIBuild from '../components/WhatIBuild';
+import ServicesDriveGrowth from '../components/ServicesDriveGrowth';
 import FeaturedProjects from '../components/FeaturedProjects';
 import TechStack from '../components/TechStack';
 import BentoAbout from '../components/BentoAbout';
 import InterestsAndInspiration from '../components/InterestsAndInspiration';
 import FAQSection from '../components/FAQSection';
+import Contact from '../components/Contact';
 import FooterSection from '../components/FooterSection';
 import { siteConfig } from '../config/siteConfig';
 
@@ -27,11 +29,13 @@ const Home = () => {
         <Hero />
         <SkillsMarquee />
         <WhatIBuild />
+        <ServicesDriveGrowth />
         <FeaturedProjects />
         <TechStack />
         <BentoAbout />
         <InterestsAndInspiration />
         <FAQSection />
+        <Contact />
       </main>
       <FooterSection />
     </>
