@@ -1,8 +1,72 @@
 import React from 'react';
-import { ArrowUpRight, Code2, ExternalLink, Activity, Sparkles, Terminal } from 'lucide-react';
+import { ArrowUpRight, Activity, Terminal, Lock, Clock } from 'lucide-react';
 
 const FeaturedProjects = () => {
   const projects = [
+    {
+      id: 'bihms',
+      title: 'BIHMS — College Management System',
+      role: 'LEAD FULL-STACK ARCHITECT',
+      year: '2026',
+      tagline: 'Comprehensive educational portal & college management system for Bihar Institute of Health & Management Studies — powering student admissions, course syllabus, DRCC verification, and campus operations.',
+      stats: [
+        { num: '10K+', label: 'Students Enrolled' },
+        { num: '99.9%', label: 'System Uptime' },
+        { num: '<180ms', label: 'Response Latency' }
+      ],
+      tech: ['React 19', 'Next.js', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'REST APIs'],
+      liveUrl: 'https://bihms.in',
+      isClosed: false,
+      image: '/bihms-preview.png',
+      preview: {
+        title: 'bihms.in :: College Portal',
+        command: 'system.sync_admissions(portal="bihms.in", status="verified")',
+        status: 'Live on Production • bihms.in'
+      }
+    },
+    {
+      id: 'fitplanet',
+      title: 'Fit Planet — Gym & Fitness Training Web App',
+      role: 'FULL-STACK LEAD & UI DESIGNER',
+      year: '2026',
+      tagline: 'High-energy fitness club platform featuring membership plans, expert coach directories, modern training facility showcases, and seamless onboarding flows.',
+      stats: [
+        { num: '2.5k+', label: 'Active Members' },
+        { num: '99.9%', label: 'Platform Uptime' },
+        { num: '<150ms', label: 'Load Latency' }
+      ],
+      tech: ['React 19', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'Vercel', 'Node.js'],
+      liveUrl: 'https://gym01-atn9.vercel.app/',
+      isClosed: false,
+      image: '/gym-preview.png',
+      preview: {
+        title: 'fitplanet :: Training Ground',
+        command: 'member.joinPlan(tier="elite-athlete", gym="FitPlanet")',
+        status: 'Live on Vercel • gym01-atn9.vercel.app'
+      }
+    },
+    {
+      id: 'aurum-restaurant',
+      title: 'AURUM — Fine Dining & Table Reservation System',
+      role: 'FULL-STACK LEAD & UI ARCHITECT',
+      year: '2026',
+      tagline: 'High-conversion digital presence for a Michelin-starred fine dining establishment, featuring real-time table reservations, interactive multi-course menu, and private dining booking.',
+      stats: [
+        { num: '+140%', label: 'Online Bookings' },
+        { num: '4.9 ★', label: 'Guest Rating' },
+        { num: '<200ms', label: 'Instant Confirmation' }
+      ],
+      tech: ['React 19', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'Stripe', 'Node.js'],
+      liveUrl: null,
+      isClosed: true,
+      closedLabel: 'Link Closed (Private Client)',
+      image: '/restaurant-preview.jpg',
+      preview: {
+        title: 'aurum.com :: Guest Concierge',
+        command: 'concierge.bookTable(guests=2, slot="19:30", confirmed=True)',
+        status: 'Client Deployment • Private Access'
+      }
+    },
     {
       id: 'neuralflow',
       title: 'NeuralFlow Studio',
@@ -15,52 +79,13 @@ const FeaturedProjects = () => {
         { num: '<250ms', label: 'Inference Latency' }
       ],
       tech: ['React 19', 'Next.js', 'Python', 'FastAPI', 'OpenAI', 'Tailwind'],
-      liveUrl: 'https://github.com',
-      githubUrl: 'https://github.com',
+      liveUrl: null,
+      isClosed: true,
+      closedLabel: 'Coming Soon',
       preview: {
         title: 'NeuralFlow Orchestrator',
         command: 'agent.run_pipeline("deep-research", stream=True)',
         status: 'Active • 4 Subagents connected'
-      }
-    },
-    {
-      id: 'pulsecraft',
-      title: 'PulseCraft Analytics',
-      role: 'FULL-STACK LEAD',
-      year: '2025',
-      tagline: 'Real-time telemetry and user journey analytics for modern web applications with privacy-first event tracking.',
-      stats: [
-        { num: '1.2M+', label: 'Events / Day' },
-        { num: '99.4%', label: 'CSAT Score' },
-        { num: '14ms', label: 'Ingestion Time' }
-      ],
-      tech: ['TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'Redis', 'Chart.js'],
-      liveUrl: 'https://github.com',
-      githubUrl: 'https://github.com',
-      preview: {
-        title: 'Live Telemetry Dashboard',
-        command: 'SELECT count(*) FROM user_events WHERE status = 200;',
-        status: 'Streaming 1,420 rps'
-      }
-    },
-    {
-      id: 'auramarket',
-      title: 'Aura 3D Interactive',
-      role: 'CREATIVE ENGINEER',
-      year: '2025',
-      tagline: 'Award-winning e-commerce showcase featuring real-time 3D product customization, custom shaders, and frictionless checkout.',
-      stats: [
-        { num: '3.8x', label: 'Conversion Lift' },
-        { num: '60 FPS', label: 'Canvas Rendering' },
-        { num: '98/100', label: 'Lighthouse Score' }
-      ],
-      tech: ['Three.js', 'React', 'WebGL', 'GLSL', 'Stripe', 'Tailwind'],
-      liveUrl: 'https://github.com',
-      githubUrl: 'https://github.com',
-      preview: {
-        title: 'WebGL Viewport',
-        command: 'renderScene(camera, controls, bloomPass);',
-        status: 'Shader pipeline optimized'
       }
     }
   ];
@@ -106,14 +131,32 @@ const FeaturedProjects = () => {
                 </div>
 
                 <div className="project-links">
-                  <a href={proj.liveUrl} target="_blank" rel="noopener noreferrer" className="btn-project-primary">
-                    <span>Visit Live Project</span>
-                    <ArrowUpRight size={16} />
-                  </a>
-                  <a href={proj.githubUrl} target="_blank" rel="noopener noreferrer" className="btn-project-outline">
-                    <Code2 size={16} />
-                    <span>Source Code</span>
-                  </a>
+                  {proj.isClosed || !proj.liveUrl ? (
+                    <button
+                      disabled
+                      className="btn-project-primary"
+                      style={{
+                        opacity: 0.65,
+                        cursor: 'not-allowed',
+                        background: 'rgba(255, 255, 255, 0.05)',
+                        borderColor: 'rgba(255, 255, 255, 0.12)',
+                        color: '#9CA3AF',
+                        pointerEvents: 'none',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.45rem'
+                      }}
+                      title="This project link is currently closed / private"
+                    >
+                      {proj.closedLabel === 'Coming Soon' ? <Clock size={15} /> : <Lock size={15} />}
+                      <span>{proj.closedLabel || 'Coming Soon'}</span>
+                    </button>
+                  ) : (
+                    <a href={proj.liveUrl} target="_blank" rel="noopener noreferrer" className="btn-project-primary">
+                      <span>Visit Live Project</span>
+                      <ArrowUpRight size={16} />
+                    </a>
+                  )}
                 </div>
               </div>
 
@@ -128,54 +171,75 @@ const FeaturedProjects = () => {
                   </span>
                 </div>
 
-                <div className="mockup-screen-area">
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-                    <Terminal size={16} color="#FF5522" />
-                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', color: '#9CA3AF' }}>
-                      terminal :: production-env
-                    </span>
-                  </div>
-
-                  <div style={{ 
-                    fontFamily: 'var(--font-mono)', 
-                    fontSize: '0.88rem', 
-                    color: '#34D399', 
-                    background: '#0B0C10', 
-                    padding: '0.85rem 1rem', 
-                    borderRadius: '8px', 
-                    marginBottom: '1rem',
-                    border: '1px solid rgba(255,255,255,0.06)'
-                  }}>
-                    $ {proj.preview.command}
-                  </div>
-
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 'auto' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.78rem', color: '#9CA3AF' }}>
-                      <Activity size={14} color="#10B981" />
-                      <span>{proj.preview.status}</span>
+                {proj.image ? (
+                  <div style={{ position: 'relative', width: '100%', height: '100%', minHeight: '260px', overflow: 'hidden' }}>
+                    <img 
+                      src={proj.image} 
+                      alt={proj.title} 
+                      style={{ 
+                        width: '100%', 
+                        height: '100%', 
+                        objectFit: 'cover', 
+                        objectPosition: 'top center',
+                        display: 'block'
+                      }} 
+                    />
+                    <div style={{
+                      position: 'absolute',
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      padding: '0.75rem 1rem',
+                      background: 'linear-gradient(to top, rgba(11,12,16,0.92) 0%, rgba(11,12,16,0.5) 70%, transparent 100%)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between'
+                    }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.78rem', color: '#9CA3AF' }}>
+                        <Activity size={14} color="#10B981" />
+                        <span style={{ color: '#E5E7EB', fontWeight: 600 }}>{proj.preview.status}</span>
+                      </div>
+                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: '#FF774D' }}>
+                        SSL Encrypted 🔒
+                      </span>
                     </div>
-                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: '#FF774D' }}>
-                      SSL Encrypted 🔒
-                    </span>
                   </div>
-                </div>
+                ) : (
+                  <div className="mockup-screen-area">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
+                      <Terminal size={16} color="#FF5522" />
+                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', color: '#9CA3AF' }}>
+                        terminal :: production-env
+                      </span>
+                    </div>
+
+                    <div style={{ 
+                      fontFamily: 'var(--font-mono)', 
+                      fontSize: '0.88rem', 
+                      color: '#34D399', 
+                      background: '#0B0C10', 
+                      padding: '0.85rem 1rem', 
+                      borderRadius: '8px', 
+                      marginBottom: '1rem',
+                      border: '1px solid rgba(255,255,255,0.06)'
+                    }}>
+                      $ {proj.preview.command}
+                    </div>
+
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 'auto' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.78rem', color: '#9CA3AF' }}>
+                        <Activity size={14} color="#10B981" />
+                        <span>{proj.preview.status}</span>
+                      </div>
+                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: '#FF774D' }}>
+                        SSL Encrypted 🔒
+                      </span>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
-        </div>
-
-        <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-          <a 
-            href="https://github.com" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="btn-project-outline"
-            style={{ padding: '0.85rem 2rem', fontSize: '0.95rem' }}
-          >
-            <Code2 size={18} />
-            <span>Explore all repositories & open-source on GitHub</span>
-            <ArrowUpRight size={16} />
-          </a>
         </div>
       </div>
     </section>

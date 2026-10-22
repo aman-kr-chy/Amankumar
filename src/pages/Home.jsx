@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import SkillsMarquee from '../components/SkillsMarquee';
 import WhatIBuild from '../components/WhatIBuild';
 import ServicesDriveGrowth from '../components/ServicesDriveGrowth';
+import ProcessSection from '../components/ProcessSection';
 import FeaturedProjects from '../components/FeaturedProjects';
 import TechStack from '../components/TechStack';
 import BentoAbout from '../components/BentoAbout';
@@ -30,6 +31,7 @@ const Home = () => {
         <SkillsMarquee />
         <WhatIBuild />
         <ServicesDriveGrowth />
+        <ProcessSection />
         <FeaturedProjects />
         <TechStack />
         <BentoAbout />

@@ -13,14 +13,6 @@ import {
 import { siteConfig } from '../config/siteConfig';
 
 const BentoAbout = () => {
-  const processSteps = [
-    { num: '01', title: 'DISCOVER & SCOPE', desc: 'Understanding core objectives, target users, and technical requirements.' },
-    { num: '02', title: 'DESIGN & PROTOTYPE', desc: 'Crafting editorial wireframes, design systems, and responsive flows in Figma.' },
-    { num: '03', title: 'ENGINEER & CODE', desc: 'Building high-performance full-stack architectures with clean code.' },
-    { num: '04', title: 'OPTIMIZE & POLISH', desc: 'Rigorous testing, SEO audits, Lighthouse 95+ scores, and micro-interactions.' },
-    { num: '05', title: 'LAUNCH & SCALE', desc: 'Production deployment with zero-downtime, analytics, and ongoing support.' }
-  ];
-
   const pillars = [
     'VISUAL HIERARCHY',
     'RADICAL SIMPLICITY',
@@ -206,32 +198,6 @@ const BentoAbout = () => {
             </div>
           </div>
 
-          {/* Card 5: 5-Stage Process Stepper */}
-          <div className="bento-card bento-process-card">
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
-              <div>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', fontWeight: 600, color: 'var(--accent-orange)' }}>
-                  HOW WE WORK TOGETHER
-                </span>
-                <h4 style={{ fontSize: '1.45rem', fontWeight: 700, color: 'var(--text-primary)', marginTop: '0.25rem' }}>
-                  The 5-Stage Engineering Workflow
-                </h4>
-              </div>
-              <span className="handwritten-note">
-                predictable, transparent, agile →
-              </span>
-            </div>
-
-            <div className="process-stepper-track">
-              {processSteps.map((step, idx) => (
-                <div key={idx} className="process-step-item">
-                  <div className="step-num">{step.num} // STEP</div>
-                  <div className="step-title">{step.title}</div>
-                  <div className="step-desc">{step.desc}</div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </section>
